@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #1d2433;
+  background: radial-gradient(circle at 20% 10%, #ffd166 0, transparent 40%),
+              radial-gradient(circle at 90% 80%, #ef476f 0, transparent 45%), #22264b;
+}
+.card { width: 100%; max-width: 520px; background: #fff; border-radius: 24px; padding: 28px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, .35); }
+h1 { margin: 0; font-size: 28px; }
+h2 { font-size: 16px; margin: 24px 0 8px; color: #556; }
+.sub { margin: 4px 0 20px; color: #667; }
+label { display: block; font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+input[type=number], input[type=text] { width: 100%; margin-top: 6px; padding: 12px; font-size: 18px;
+        border: 2px solid #dde1ee; border-radius: 12px; }
+input:focus { outline: none; border-color: #6c63ff; }
+.options { display: flex; gap: 20px; }
+.options label { font-weight: 500; }
+button { font: inherit; cursor: pointer; border: none; border-radius: 12px; }
+#go { width: 100%; padding: 14px; font-size: 18px; font-weight: 700; color: #fff;
+      background: linear-gradient(90deg, #6c63ff, #ef476f); }
+#go:active { transform: scale(.98); }
+.presets { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+.presets button { padding: 8px 14px; background: #eef0fb; color: #3b3f8f; font-weight: 600; }
+.presets button:hover { background: #dfe2fb; }
+.error { color: #d62839; min-height: 1.2em; font-weight: 600; }
+.balls { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; min-height: 64px; margin: 8px 0 16px; }
+.ball { width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
+        font-size: 22px; font-weight: 800; color: #1d2433;
+        background: radial-gradient(circle at 30% 30%, #fff 0, #ffd166 45%, #f4a300 100%);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, .2); animation: pop .45s ease-out both; }
+@keyframes pop { from { transform: scale(0) rotate(-180deg); } to { transform: scale(1) rotate(0); } }
+.result { display: flex; gap: 8px; }
+#copy { padding: 0 18px; margin-top: 6px; background: #1d2433; color: #fff; font-weight: 600; }
+.history { margin: 0; padding-left: 20px; color: #445; font-family: ui-monospace, monospace; }
+footer { margin-top: 24px; font-size: 13px; color: #778; text-align: center; line-height: 1.6; }
+footer a { color: #6c63ff; }

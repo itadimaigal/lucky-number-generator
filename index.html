@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lucky Number Generator · itadimaigal</title>
+  <meta name="description" content="Generate random lotto numbers in your browser. Free, fair and private.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Lucky Number Generator</h1>
+    <p class="sub">Random lotto numbers, made fairly in your browser.</p>
+
+    <div class="presets">
+      <button type="button" data-preset="1,43,6">Loto 6</button>
+      <button type="button" data-preset="1,37,7">Loto 7</button>
+      <button type="button" data-preset="1,31,5">Mini Loto</button>
+      <button type="button" data-preset="1,49,6">6 of 49</button>
+    </div>
+
+    <form id="form">
+      <label>Random number range start
+        <input id="start" type="number" value="1" required>
+      </label>
+      <label>Random number range end
+        <input id="end" type="number" value="43" required>
+      </label>
+      <label>How many numbers you want to generate
+        <input id="count" type="number" value="6" min="1" max="50" required>
+      </label>
+      <div class="options">
+        <label><input id="unique" type="checkbox" checked> No repeats</label>
+        <label><input id="sorted" type="checkbox" checked> Sort numbers</label>
+      </div>
+      <button id="go" type="submit">Generate my lucky numbers</button>
+    </form>
+
+    <p id="error" class="error" role="alert"></p>
+
+    <div id="balls" class="balls" aria-hidden="true"></div>
+    <label>Your generated numbers
+      <div class="result">
+        <input id="result" type="text" readonly placeholder="Press generate">
+        <button id="copy" type="button">Copy</button>
+      </div>
+    </label>
+
+    <h2>Recent picks</h2>
+    <ol id="history" class="history"></ol>
+
+    <footer>
+      Just for fun: every combination has exactly the same chance. Play responsibly.<br>
+      Won big? Remember <b>itadimaigal</b> 😉 ·
+      <a href="https://www.youtube.com/@itadimaigal">YouTube</a> ·
+      <a href="https://github.com/itadimaigal">GitHub</a>
+    </footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
